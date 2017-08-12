@@ -4,10 +4,11 @@
 #                                                          #
 ############################################################
 
-# Add in your name
-# Add in purpose of this script
+# Haley Arnold
+# Practice with GitHub
 
 # Libraries ----
+library(ggplot2)
 
 # Functions ----
 # This is a ggplot function for a nice clean theme
@@ -26,12 +27,17 @@ theme.clean <- function(){
           plot.title = element_text(size=20, vjust=1, hjust=0.5),
           legend.text = element_text(size=12, face="italic"),          
           legend.title = element_blank(),                              
-          legend.position=c(0.9, 0.9))
-}
+          legend.position=c(0.9, 0.9))}
+
 
 # Load data ----
 
 # Make a plot showing how soil temperature changes with elevation ----
+p <- qplot(Elevation.m, Soil.temp.mean, data=temp_elevation,
+   main="Scatterplots of soil temperature with elevation",
+   xlab="Elevation (m)", ylab="Mean soil temperature")
+
+p + theme.clean()
 
 # Save your plot in your project directory
 
